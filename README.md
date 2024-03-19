@@ -1,1 +1,1 @@
-# Erdos-DL-Project-Classifying-Brian-Acitvity
+# Erdos-DL-Project-Classifying-Brian-Activity
