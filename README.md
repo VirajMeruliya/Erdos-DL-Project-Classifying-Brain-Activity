@@ -1,1 +1,1 @@
-# Erdos-DL-Project-Classifying-Brian-Activity
+# Erdos-DL-Project-Classifying-Brain-Activity
