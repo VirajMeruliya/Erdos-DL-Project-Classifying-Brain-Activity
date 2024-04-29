@@ -19,7 +19,7 @@ We are given two sets of data as inputs:
 1. EEG data as time-series.
 2. Spectrograms as images.
 
-The data contains information of 1950 patients. The targets are expert diagnostic votes on six classes of brain activities. After some pre-precessing, we use around 17000 instances of data.
+The data contains information of 1950 patients. For most patients there are multiple EEGs and Spectrograms. After some pre-precessing, we use around 17000 instances of data. Using these information, each set of input features are assigned an expert diagnostic votes as targets. These targets are divided into six classes of brain activities. These brain activities are seizure (SZ), generalized periodic discharges (GPD), lateralized periodic discharges (LPD), lateralized rhythmic delta activity (LRDA), generalized rhythmic delta activity (GRDA), or other. 
 
 First, we select our features following standard techniques. Among 20 raw EEG features within some time frame, we choose 8 important features which represent EEG data detected from 8 different positions of the brain. We consider differences of neighboring EEG features, de-noise them, and take them as the training/inference features. 
 
@@ -32,10 +32,14 @@ For the deep learning architecture, we roughly follow that of EEGNet. We arrange
 Upon running the experiments using different sets of hyperparameters, the best results we obtained are summarized in the table below: 
 
 ## Future Directions
-There was a starter notebook provided at Kaggle that used `Efficientnet' to classify the data. If we use the architecture of the starter notebook, then the minimum validation losses we get are 0.8426 (for spectrogram data), and 1.2149 (for EEG data, treated as images). We also tried with different basic models like Mobilenet2 (trained on imagenet), Yolo version 8, Untrained ResNet50V2 and all of them gave results in the same range (or slightly worse). So the most efficient model from above that we finally obtained after several trials gives significantly better results that the starter notebook. In future there is the scope of using a combination of few of these architectures and/or new architectures such as transformers to get better results. 
+There was a starter notebook provided at Kaggle that used `Efficientnet' to classify the data. If we use the architecture of the starter notebook, then the **minimum validation losses** we get are **0.8426** (for spectrogram data), and **1.2149** (for EEG data, treated as images). We also tried with different basic models like Mobilenet2 (trained on imagenet), Yolo version 8, Untrained ResNet50V2 and all of them gave results in the same range (or slightly worse). So the most efficient model from above that we finally obtained after several trials gives significantly better results that the starter notebook. In future there is the scope of using a combination of few of these architectures and/or new architectures such as transformers to get better results. 
 
 ## References
 
 1. Jin Jing, Zhen Lin, Chaoqi Yang, Ashley Chow, Sohier Dane, Jimeng Sun, M. Brandon Westover. (2024). HMS - Harmful Brain Activity Classification . Kaggle. https://kaggle.com/competitions/hms-harmful-brain-activity-classification
+
+2. The resnet notebook
+
+3. eeg feature reference
 
 
