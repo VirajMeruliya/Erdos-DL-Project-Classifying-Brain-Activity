@@ -1,11 +1,10 @@
 # Harmful Brain Activity Classification using Deep Learning - Erdös Deep Learning Project
 
 ## Introduction
-
 Electroencephalography (EEG) has long been a valuable tool in the diagnosis and monitoring of neurological disorders, including epilepsy. In critically ill hospital patients, the ability to rapidly and accurately detect seizures and harmful brain activity is of utmost importance for timely intervention and treatment. The advent of machine learning techniques offers promising avenues for automating the analysis of EEG data, paving the way for more efficient and precise neurocritical care. This summary outlines the efforts undertaken in a Kaggle competition aimed at developing a model for classifying such seizures, with the overarching goal of advancing medical research and patient care in neurology and related fields.
 
-## Methodology
 
+## Methodology
 We are given two sets of data as inputs: EEG as time-series numerical data and spectrograms as images for 1950 patients within some time frame. The targets are expert diagnostic votes on six classes of brain activities. After some pre-precessing, we use around 17000 instances of data.
 
 First, we select our features following standard techniques. Among 20 raw EEG features within some time frame, we choose 8 important features which represent EEG data detected from 8 different positions of the brain. We consider differences of neighboring EEG features, de-noise them, and take them as the training/inference features. 
@@ -16,22 +15,13 @@ For the deep learning architecture, we roughly follow that of EEGNet. We arrange
 
 
 ## Results and Summary
-
 Upon running the experiments using different sets of hyperparameters, the best results we obtained are summarized in the table below: 
-\vspace{-0.5 cm}
-\begin{table}[H]
-\caption{Best performance table for different models using EEG data}
-\vspace{-0.5 cm}
-\label{sample-table}
-\begin{center}
-\begin{tabular}{lllllll}
-\multicolumn{1}{c}{\bf nn.GRU hidden size} &\multicolumn{1}{c}{\bf num folds} &\multicolumn{1}{c}{\bf Optimizer} &\multicolumn{1}{c}{\bf learning rate} &\multicolumn{1}{c}{\bf drop prob EEGNet} &\multicolumn{1}{c}{\bf drop prob Resnet1D} &\multicolumn{1}{c}{\bf Min Val loss}
-\\ \hline \\
-128	&5	&Adagrad	&1.00E-03	&0.1	&0.1	&0.5\\
-128 (LSTM)	&4	&Adagrad	&1.00E-03	&0	&0	&0.5\\
-128	&5	&Adadelta	&1.00E-01	&0.1	&0.1	&0.48\\
-128	&5	&Adadelta	&1.00E-01	&0.1	&0.1	&0.5\\
-256	&5	&AdamW	&1.00E-03	&0.1	&0.2	&0.5
-\end{tabular}
-\end{center}
-\end{table}
+
+## Future Directions
+There was a starter notebook provided at Kaggle that used `Efficientnet' to classify the data. If we use the architecture of the starter notebook, then the minimum validation losses we get are 0.8426 (for spectrogram data), and 1.2149 (for EEG data, treated as images). We also tried with different basic models like Mobilenet2 (trained on imagenet), Yolo version 8, Untrained ResNet50V2 and all of them gave results in the same range (or slightly worse). So the most efficient model from above that we finally obtained after several trials gives significantly better results that the starter notebook. In future there is the scope of using a combination of few of these architectures and/or new architectures such as transformers to get better results. 
+
+## References
+
+
+
+
