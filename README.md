@@ -8,12 +8,18 @@ Team members:
 [Soumya Ganguly](https://github.com/soumya123ganguly)  
 [Viraj Meruliya](https://github.com/VirajMeruliya)
 
+The link for the video presentation: [video link]
+
 ## Introduction
 Electroencephalography (EEG) has long been a valuable tool in the diagnosis and monitoring of neurological disorders, including epilepsy. In critically ill hospital patients, the ability to rapidly and accurately detect seizures and harmful brain activity is of utmost importance for timely intervention and treatment. The advent of machine learning techniques offers promising avenues for automating the analysis of EEG data, paving the way for more efficient and precise neurocritical care. This summary outlines the efforts undertaken in a Kaggle competition aimed at developing a model for classifying such seizures, with the overarching goal of advancing medical research and patient care in neurology and related fields.
 
 
 ## Methodology
-We are given two sets of data as inputs: EEG as time-series numerical data and spectrograms as images for 1950 patients within some time frame. The targets are expert diagnostic votes on six classes of brain activities. After some pre-precessing, we use around 17000 instances of data.
+We are given two sets of data as inputs:  
+1. EEG data as time-series.
+2. Spectrograms as images.
+
+The data contains information of 1950 patients. The targets are expert diagnostic votes on six classes of brain activities. After some pre-precessing, we use around 17000 instances of data.
 
 First, we select our features following standard techniques. Among 20 raw EEG features within some time frame, we choose 8 important features which represent EEG data detected from 8 different positions of the brain. We consider differences of neighboring EEG features, de-noise them, and take them as the training/inference features. 
 
@@ -30,6 +36,6 @@ There was a starter notebook provided at Kaggle that used `Efficientnet' to clas
 
 ## References
 
-
+1. Jin Jing, Zhen Lin, Chaoqi Yang, Ashley Chow, Sohier Dane, Jimeng Sun, M. Brandon Westover. (2024). HMS - Harmful Brain Activity Classification . Kaggle. https://kaggle.com/competitions/hms-harmful-brain-activity-classification
 
 
