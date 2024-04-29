@@ -3,10 +3,10 @@
 This project was completed as part of the Deep Learning course at the Erdos Institute.
 
 Team members:
-Shreya Shukla
-Zilu Ma
-Soumya Ganguly
-Viraj Meruliya
+[Shreya Shukla]
+[Zilu Ma]
+[Soumya Ganguly](https://github.com/soumya123ganguly)
+[Viraj Meruliya](https://github.com/VirajMeruliya)
 
 ## Introduction
 Electroencephalography (EEG) has long been a valuable tool in the diagnosis and monitoring of neurological disorders, including epilepsy. In critically ill hospital patients, the ability to rapidly and accurately detect seizures and harmful brain activity is of utmost importance for timely intervention and treatment. The advent of machine learning techniques offers promising avenues for automating the analysis of EEG data, paving the way for more efficient and precise neurocritical care. This summary outlines the efforts undertaken in a Kaggle competition aimed at developing a model for classifying such seizures, with the overarching goal of advancing medical research and patient care in neurology and related fields.
