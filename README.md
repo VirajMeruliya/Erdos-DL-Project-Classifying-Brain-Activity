@@ -31,6 +31,15 @@ For the deep learning architecture, we roughly follow that of EEGNet. We arrange
 ## Results and Summary
 Upon running the experiments using different sets of hyperparameters, the best results we obtained are summarized in the table below: 
 
+| nn.GRU hidden size | num folds | Optimizer | learning rate | drop prob EEGNet | drop prob Resnet1D | Min Val loss |
+|---------------------|-----------|-----------|---------------|------------------|---------------------|--------------|
+| 128                 | 5         | Adagrad   | 1.00E-03      | 0.1              | 0.1                 | 0.5          |
+| 128 (LSTM)          | 4         | Adagrad   | 1.00E-03      | 0                | 0                   | 0.5          |
+| 128                 | 5         | Adadelta  | 1.00E-01      | 0.1              | 0.1                 | 0.48         |
+| 128                 | 5         | Adadelta  | 1.00E-01      | 0.1              | 0.1                 | 0.5          |
+| 256                 | 5         | AdamW     | 1.00E-03      | 0.1              | 0.2                 | 0.5          |
+
+
 ## Future Directions
 There was a starter notebook provided at Kaggle that used `Efficientnet' to classify the data. If we use the architecture of the starter notebook, then the **minimum validation losses** we get are **0.8426** (for spectrogram data), and **1.2149** (for EEG data, treated as images). We also tried with different basic models like Mobilenet2 (trained on imagenet), Yolo version 8, Untrained ResNet50V2 and all of them gave results in the same range (or slightly worse). So the most efficient model from above that we finally obtained after several trials gives significantly better results that the starter notebook. In future there is the scope of using a combination of few of these architectures and/or new architectures such as transformers to get better results. 
 
