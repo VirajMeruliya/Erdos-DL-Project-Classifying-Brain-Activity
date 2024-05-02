@@ -46,9 +46,3 @@ There was a starter notebook provided at Kaggle that used `Efficientnet' to clas
 ## References
 
 1. Jin Jing, Zhen Lin, Chaoqi Yang, Ashley Chow, Sohier Dane, Jimeng Sun, M. Brandon Westover. (2024). HMS - Harmful Brain Activity Classification . Kaggle. https://kaggle.com/competitions/hms-harmful-brain-activity-classification
-
-2. The resnet notebook
-
-3. eeg feature reference
-
-
