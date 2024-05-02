@@ -47,5 +47,5 @@ There was a starter notebook provided at Kaggle that used `Efficientnet' to clas
 
 1. Jin Jing, Zhen Lin, Chaoqi Yang, Ashley Chow, Sohier Dane, Jimeng Sun, M. Brandon Westover. (2024). HMS - Harmful Brain Activity Classification . Kaggle. https://kaggle.com/competitions/hms-harmful-brain-activity-classification
 2. Chris Deotte. How to make spectrogram from eeg. https://www.kaggle.com/code/cdeotte/how-to-make-spectrogram-from-eeg
-3. arcus C Ng, Jin Jing, and M Brandon Westover. A primer on eeg spectrograms. Journal of Clinical Neurophysiology, 39(3):177–183, 2022.
+3. Marcus C Ng, Jin Jing, and M Brandon Westover. A primer on eeg spectrograms. Journal of Clinical Neurophysiology, 39(3):177–183, 2022.
 
