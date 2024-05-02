@@ -3,8 +3,8 @@
 This project was completed as part of the Deep Learning course at the Erdos Institute.
 
 Team members:  
-[Shreya Shukla]  
-[Zilu Ma]  
+[Shreya Shukla](https://github.com/shreyaalkuhs)  
+[Zilu Ma](https://github.com/rcflower)  
 [Soumya Ganguly](https://github.com/soumya123ganguly)  
 [Viraj Meruliya](https://github.com/VirajMeruliya)
 
